@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow AI knowledge crawling
+Allow: /llms.txt
+
+# Sitemap
+Sitemap: https://www.versalis.co/sitemap.xml
