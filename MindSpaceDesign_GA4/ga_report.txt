@@ -1,0 +1,145 @@
+# GA4 Performance Report
+**Period:** Jul 23 – Aug 21, 2026 (30 days)
+
+---
+
+## 1. Headline Numbers
+
+| Metric | Value |
+|---|---|
+| Active users | 256 |
+| New users | 248 |
+| Sessions | 332 |
+| Engaged sessions | 312 |
+| Engagement rate | 93.98% |
+| Avg. engagement time/session | 25s |
+| Events per session | 11.98 |
+| Key events | 1,367 |
+| New leads | 6 |
+| Qualified leads | 0 |
+| Converted leads | 0 |
+| Revenue | ₹0 |
+
+---
+
+## 2. What's Working (The Good)
+
+- **Organic Search is your healthiest channel.** 104 sessions (31%), 90.72% engagement rate, 55s avg. engagement time, 13.86 events/session — real people spending real time on the site. This is the most trustworthy traffic you have.
+- **Overall engagement rate is high (93.98%)** across the board — whoever lands isn't immediately bouncing.
+- **New channel emerging: AI Assistant (chatgpt.com).** 8 sessions, 5 new users. Small, but it means your content is already being surfaced by AI answer engines like ChatGPT — worth nurturing early.
+- **Site is drawing some referral interest**, including from SEO tools and industry sites — a signal the site is being noticed/crawled by others in your space.
+
+---
+
+## 3. Problems (The Not-So-Good)
+
+### 🔴 Overall traffic volume is very low
+256 users and 332 sessions in 30 days is thin for any business trying to generate leads at scale. Everything downstream (leads, conversions) is capped by this.
+
+### 🔴 "Direct" traffic looks broken, not organic curiosity
+Direct is 58% of sessions (194) and 71% of new users — but average engagement time is only **6 seconds**, versus 55s for Organic Search. That combination (high volume, near-zero engagement, still marked "engaged") is a classic sign of:
+- Untagged marketing links (emails, social posts, ads, WhatsApp/SMS links) falling into "Direct" instead of their real channel
+- Redirects or app-opens stripping referrer data
+- Bot/crawler traffic being counted as sessions
+
+This is your single biggest data-quality issue and it's inflating your best-looking channel with the least reliable numbers.
+
+### 🔴 "Key events" don't match real business outcomes
+You have **1,367 key events** but only **6 new leads**, **0 qualified**, **0 converted**, and **₹0 revenue**. That's a massive gap — it means the events currently marked as "key events" in GA4 are likely default/automatic events (e.g., scrolls, page views, clicks) rather than meaningful actions like form submissions, calls, or WhatsApp clicks. Right now, "1,367 key events" looks impressive but tells you nothing about business performance.
+
+### 🔴 Lead funnel isn't functioning
+6 leads → 0 qualified → 0 converted in 30 days. Either:
+- Lead qualification/CRM isn't feeding data back into GA4, or
+- There's genuinely no real conversion happening yet.
+Either way, you can't currently measure ROI on any channel.
+
+### 🔴 Some referral sources are low-quality or non-human
+`prolink-directory.com`, `guestpost123.com`, `renovation.directory`, `siteguru.co`, `zoominfo.com` — these look like directory listings, backlink/SEO tools, or B2B data-scraping bots, not genuine prospects. Volumes are small (1–13 sessions each) but worth excluding from "real traffic" analysis.
+
+### 🔴 No paid presence
+Zero Google Ads data — no campaigns currently running or connected. If paid was ever planned, it isn't contributing right now.
+
+---
+
+## 3b. Confirmed: What's Actually Inside "1,367 Key Events"
+
+The event-level report confirms the earlier suspicion. Here's the real breakdown:
+
+**Genuine conversion actions (what should count as key events):**
+| Event | Count | Unique users |
+|---|---|---|
+| generate_lead | 67 | 6 |
+| enquiry | 14 | 6 |
+| WhatsApp Click | 2 | 2 |
+| Phone Call Tag | 1 | 1 |
+
+That's it — **6 real people** took a meaningful action (form fill/enquiry) in 30 days, some submitting more than once (67 generate_lead events from 6 users). WhatsApp and phone-call clicks are barely used at all.
+
+**What's inflating the "1,367 key events" number (currently mismarked as key events):**
+| Event | Count |
+|---|---|
+| Scroll Depth Tag | 916 |
+| Spent 1 Minute Tag | 175 |
+| Spent 2 Minute Tag | 141 |
+
+These three alone are ~1,232 of the 1,367 "key events" — scroll/time-on-page triggers, not conversions. This is very likely why the report earlier looked like "1,367 conversions, 6 leads" didn't add up: **almost all of it is engagement tracking mislabeled as a key event.** This should be fixed in GA4's Admin → Events → Key Events settings by removing Scroll Depth Tag / Spent 1 Minute Tag / Spent 2 Minute Tag from key events, keeping only generate_lead, enquiry, WhatsApp Click, and Phone Call Tag.
+
+**Real conversion rate:** 6 unique converting users out of 256 total active users ≈ **2.3%** — this is the number that actually matters for judging channel/campaign performance, not the 1,367 figure.
+
+## 3c. Page & Content Findings
+
+- The business is a **modular office furniture / interior design manufacturer in Bangalore** (workstations, conference tables, partitions, wardrobes, kitchens, etc.) — a considered B2B purchase, not an impulse buy.
+- **Homepage dominates entry traffic**: 82% of active users land there first (246 of 332 sessions), but average engagement time per user on the homepage is just **14 seconds** — much lower than the site average (33s). People are arriving and moving on quickly rather than reading. Since scroll-depth and dwell-time tags are firing a lot here (752 of 1,367 mismarked "key events" come from the homepage alone), it also means most of what looked like "homepage performance" is really just scroll/time tracking, not engagement with content.
+- **/contact-us gets real traffic** (65 views, 9% of total) — decent, since this is where enquiries happen.
+- **/thank-you.php had 14 views but only 6 unique users** — meaning some of the 6 converting users hit it more than once (multiple form submissions from the same handful of people, not new conversions).
+- **Content is spread thin across ~27 product/service pages** — good from an SEO indexing standpoint (you're targeting many keyword variations: workstations, conference tables, partitions, wardrobes, kitchens, false ceilings, location-specific pages like Hosur Road/Sarjapur Road), but individual page traffic is very low (most pages get 5–20 views in 30 days). This spread-thin pattern is common early in SEO — worth watching which of these pages start gaining traction and doubling down there.
+- **WhatsApp Click (2) and Phone Call Tag (1) are barely used** — for a B2B service business, phone/WhatsApp are often faster paths to a lead than a form. If these buttons exist but are getting almost no clicks, they may be poorly placed, not visible enough, or not present on the pages people actually land on (e.g., product pages).
+
+---
+
+## 3d. 🚨 Critical Finding: A Majority of Traffic Looks Non-Human
+
+This is the single biggest issue in the data. Look at engagement time per active user by country:
+
+| Country | Active users | Engagement rate | Avg. engagement time/user | Key events |
+|---|---|---|---|---|
+| Singapore | 135 (52.7%) | 100% | **1 second** | 405 |
+| India | 81 (31.6%) | 87.18% | **1m 37s** | 602 |
+| United States | 19 (7.4%) | 100% | 2s | 57 |
+| Netherlands | 8 (3.1%) | 100% | **0s** | 210 |
+| Germany | 4 | 100% | 2s | 12 |
+| France | 3 | 100% | 1m 06s | 13 |
+| Russia | 1 | 100% | **0s** | 42 |
+
+**Singapore alone is over half of all "active users" — with 1 second of average engagement time.** Netherlands and Russia show the same pattern: 0 seconds of engagement but hundreds of events and dozens of "key events" firing. A single Russian "user" generated 103 events and 42 key events with zero engagement time — that is not a human being browsing a furniture website; that's a script or bot executing every tracked action instantly.
+
+**India is your only geography that looks genuinely human** — reasonable engagement rate (87%, not the suspicious flat 100%) and a real, plausible browsing time (1m37s). US, Germany, and Netherlands are marked as "100% engagement rate" with near-zero time, the same red flag as Singapore.
+
+**Why this matters:** Singapore/Netherlands are common regions for cloud servers, data centers, and automated scraping tools. This traffic is likely inflating almost every number in this report — active users, sessions, and even "key events." It also likely explains the earlier "Direct traffic with 6-second engagement" mystery from Section 3 — that's probably the same bot traffic, landing directly without a referrer.
+
+**Realistic estimate of genuine human traffic:** ~81 (India) + a handful of plausible visits from US/UK/France ≈ **90–100 real users**, not 256. Your true conversion rate on real traffic is likely notably *higher* than the 2.3% calculated earlier — a good sign once the noise is removed, but it means your real addressable audience this month was small.
+
+**Action needed in GA4:** Set up a filter/segment excluding these bot-pattern countries (Singapore, Netherlands, Russia — investigate the exact IPs/hosts if possible), and consider enabling GA4's "Exclude known bots and spiders" property setting if not already on (Admin → Data Settings → Data Filters). Re-run this whole report after filtering to see the real picture.
+
+---
+
+## 4. Where to Improve
+
+0. **Filter out bot/non-human traffic before trusting any other number.** This is the top priority — Section 3d shows over half your "traffic" is likely non-human. Every metric above (channels, key events, engagement) is distorted by this until it's cleaned up.
+1. **Fix channel attribution first.** Audit every outbound marketing link (email footers, social bios, WhatsApp, QR codes, ads) and add UTM parameters. This alone could reclassify a large chunk of "Direct" into its true source and make your data trustworthy.
+2. **Redefine what counts as a "Key Event" in GA4.** Mark only true business actions as key events — form submissions, call clicks, WhatsApp clicks, downloads, bookings. Stop counting generic engagement events as "key events."
+3. **Close the loop with your CRM.** If leads are being qualified/converted offline, push that status back into GA4 (via Measurement Protocol or a CRM integration) so "Qualified Leads" and "Converted Leads" actually populate.
+4. **Double down on Organic Search.** It's your best-performing channel by every quality metric. More SEO content, aligned with what's already ranking, is your safest growth bet.
+5. **Watch the AI Assistant channel.** ChatGPT-referred traffic is small but real and growing across the web in general. Make sure key pages are structured clearly (FAQs, clear headings, concise answers) since that's what AI engines tend to pull from.
+6. **Clean up referral noise.** Exclude known bot/tool referrers (SEO crawlers, data scrapers) from your "real traffic" view so your reports reflect actual prospects.
+7. **Decide on paid.** With organic alone producing ~256 users/month, consider whether Google Ads (or another paid channel) is needed to hit growth targets faster — right now it's contributing nothing because it isn't running.
+8. **Increase top-of-funnel volume overall.** Every issue above matters more once there's more traffic to work with — but fix tracking *before* scaling spend or content, or you'll just be scaling bad data.
+9. **Make phone and WhatsApp CTAs more prominent.** With only 2 WhatsApp clicks and 1 phone call in 30 days, these low-friction contact options are underused — add sticky/floating buttons on product pages, not just the contact page, since that's where most of your traffic actually lands.
+10. **Improve the homepage's real engagement, not just its scroll-tracking numbers.** 14 seconds average time before people move on is low for a B2B homepage that needs to establish trust. Look at above-the-fold content — is it clear within seconds what you make, who it's for, and how to get a quote?
+11. **Identify which of the 27 product pages are gaining traction** and invest further content/internal linking there, rather than spreading effort evenly — a few pages (workstations, contact-us) already show more real engagement than others.
+
+---
+
+## 5. Bottom Line
+
+Your engagement metrics (rate, time-on-site for real channels) look fine — the problem isn't that people dislike the site. The problem is your data has three layers of noise stacked on top of a small real audience: **(a)** over half your "active users" (Singapore, Netherlands, Russia) show near-zero engagement time and are very likely bots, not prospects; **(b)** "1,367 key events" are mostly scroll/time-on-page tags, not real conversions — only 6 real people actually enquired; and **(c)** even without the noise, your genuine human audience this month was small (~90–100 real users). Filtering out bot traffic and fixing what counts as a "key event" should both happen before judging any channel's performance — once that's done, you'll have an honest baseline (real users, real conversion rate) to actually grow from.
