@@ -1,0 +1,52 @@
+# Homepage SEO Checklist (2026)
+
+## 1. Keyword Strategy
+- [ ] One primary keyword chosen for the homepage (brand + core offering)
+- [ ] 2–4 related secondary keywords identified
+- [ ] Checked that no other page on the site targets the same primary keyword (avoid cannibalization)
+- [ ] Keywords reflect actual search intent, not just volume
+
+## 2. On-Page Elements
+- [ ] Title tag is 50–60 characters, keyword near the front, brand name at the end
+- [ ] Meta description is 150–160 characters, includes keyword + reason to click
+- [ ] Exactly one H1 tag, containing primary keyword + value proposition
+- [ ] H2/H3 subheadings used for each major section
+- [ ] URL is clean and short (e.g., yourdomain.com)
+- [ ] Paragraphs kept short (under ~30 words) with bullets/tables for scannability
+
+## 3. Homepage Content Blocks
+- [ ] Hero section: H1 + one-line value prop + primary CTA, above the fold
+- [ ] "What we do / who it's for" section, clear and keyword-natural
+- [ ] Services/products section with keyword-rich descriptions linking to dedicated pages
+- [ ] Trust signals: testimonials, client logos, certifications, reviews
+- [ ] FAQ section targeting long-tail queries
+- [ ] Clear CTA repeated below the fold
+
+## 4. Technical SEO
+- [ ] Core Web Vitals pass: LCP < 2.5s, INP < 200ms, CLS < 0.1 (check in Search Console)
+- [ ] Mobile version tested and optimized (mobile-first indexing)
+- [ ] HTTPS enabled
+- [ ] XML sitemap submitted to Google Search Console
+- [ ] Schema markup added (Organization, WebSite, FAQ where relevant)
+- [ ] Internal links from homepage point to key pages (services, about, contact)
+- [ ] Images have descriptive alt text and are compressed for speed
+
+## 5. Content Quality (E-E-A-T)
+- [ ] Copy is specific to the business — no generic filler or AI-sounding boilerplate
+- [ ] Content demonstrates real expertise/experience (case studies, specifics, credentials)
+- [ ] No keyword stuffing anywhere on the page
+- [ ] Stats, testimonials, and offers are current and accurate
+- [ ] Tone is natural and conversational, written for humans first
+
+## 6. Off-Page / Ongoing
+- [ ] Homepage earns or has backlinks from credible sites
+- [ ] Analytics set up to track homepage-specific sessions and conversions
+- [ ] Bounce rate and scroll depth monitored as early warning signs
+- [ ] Content reviewed and refreshed periodically (not "set and forget")
+
+## 7. Pre-Launch Final Check
+- [ ] Ran target keyword through Google to compare against top 3 competitors
+- [ ] Tested page speed on PageSpeed Insights
+- [ ] Verified mobile rendering on a real device
+- [ ] Confirmed all CTAs and links work
+- [ ] Proofread for grammar, clarity, and tone
