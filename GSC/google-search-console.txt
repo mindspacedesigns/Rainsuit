@@ -1,0 +1,372 @@
+Google Search Console – SEO Error Fixing & Indexing Workflow
+1. Purpose
+
+This workflow explains how to identify and fix common Google Search Console (GSC) indexing issues and how to request Google to recrawl the corrected pages.
+
+The main issues covered are:
+
+Canonical issues
+Redirect issues
+404 errors
+Pages not indexed
+Crawled but currently not indexed
+Discovered but currently not indexed
+2. Canonical Issue – Fixing Workflow
+Step 1: Identify the affected URL
+
+Go to:
+
+Google Search Console → Pages → Indexing → Not indexed
+
+Find the URLs showing a canonical-related issue.
+
+Step 2: Check the page on the website
+
+Verify that the page has the correct canonical URL.
+
+For example:
+
+Correct:
+
+https://example.com/product-page
+
+Canonical:
+
+https://example.com/product-page
+
+Avoid unnecessary canonical pointing to another page.
+
+Step 3: Fix the canonical on the website
+
+Update the canonical tag so that it points to the preferred URL.
+
+Also check:
+
+HTTPS version
+www/non-www version
+Trailing slash consistency
+Duplicate URLs
+URL parameters
+Internal links
+Step 4: Test in Google Search Console
+
+After making the website change:
+
+GSC → URL Inspection → Enter URL → Test Live URL
+
+Check whether Google can now see the correct canonical.
+
+Step 5: Request indexing
+
+If the live test is correct:
+
+Click → Request Indexing
+
+Step 6: Monitor
+
+Wait for Google to recrawl the page.
+
+Then check:
+
+URL Inspection → Google-selected canonical
+
+The goal is for Google-selected canonical to match the preferred canonical.
+
+3. Redirect Issue – Fixing Workflow
+
+A redirect is different from a canonical problem.
+
+If an old URL redirects to a new URL, you normally do not need to index the old URL.
+
+Example
+
+Old URL:
+
+https://example.com/old-page
+
+301 Redirect →
+
+https://example.com/new-page
+
+The new-page URL is the URL you want indexed.
+
+Step 1: Check the redirect
+
+Open the old URL in your browser.
+
+Make sure it redirects to the correct and relevant page.
+
+Step 2: Avoid redirect chains
+
+Avoid:
+
+Old URL → URL 2 → URL 3 → Final URL
+
+Prefer:
+
+Old URL → Final URL
+
+Step 3: Check the final URL
+
+Use:
+
+GSC → URL Inspection → Final URL
+
+Check:
+
+URL returns 200 OK
+Page is accessible
+Page is indexable
+No noindex
+Correct canonical
+Google-selected canonical is correct
+Step 4: Test Live URL
+
+Click:
+
+Test Live URL
+
+If everything is correct, continue.
+
+Step 5: Request indexing
+
+Click:
+
+Request Indexing
+
+Request indexing for the final destination URL, not the redirected URL.
+
+4. 404 Error – Fixing Workflow
+
+A 404 means that the requested URL does not exist on the website.
+
+First decide what should happen to that URL.
+
+There are three main options.
+
+Option A – The page should exist
+
+If the page was accidentally deleted:
+
+Restore the page.
+Make sure it loads correctly.
+Confirm it returns 200 OK.
+Check the canonical.
+Go to GSC → URL Inspection.
+Click Test Live URL.
+Click Request Indexing.
+
+Google can then recrawl the URL.
+
+Option B – The page has been permanently moved
+
+If there is a relevant replacement page:
+
+Use a 301 redirect.
+
+Example:
+
+/old-page
+
+↓
+
+301 Redirect
+
+↓
+
+/new-page
+
+Then:
+
+Test the new URL.
+Make sure it returns 200 OK.
+Check the canonical.
+Request indexing for the new URL.
+
+Do not redirect unrelated pages to the homepage simply to remove 404 errors.
+
+Option C – The page is permanently removed
+
+If the page is intentionally deleted and there is no relevant replacement:
+
+You can leave the URL as 404 or use 410 Gone.
+
+You do not need to index it.
+
+Google will gradually remove the URL from its index as it recrawls the site.
+
+5. How to Make 404 Errors Disappear from GSC
+
+You do not manually delete a 404 from Google Search Console.
+
+Instead:
+
+Fix the URL on the website → Google recrawls it → GSC updates the report
+
+For example:
+
+Before
+
+/old-page → 404
+
+After restoring
+
+/old-page → 200 OK
+
+or:
+
+After redirecting
+
+/old-page → 301 → /new-page
+
+Google will eventually recrawl the URL and update the GSC report.
+
+The GSC report may continue showing the old 404 for some time even after you have fixed it. This is normal.
+
+6. Crawled – Currently Not Indexed
+
+This means Google crawled the page but decided not to index it at that time.
+
+Workflow
+Inspect the URL.
+Check page quality.
+Check for duplicate or thin content.
+Check the canonical.
+Check internal links.
+Make sure the page provides useful, unique information.
+Check that there is no noindex.
+Test Live URL.
+Request Indexing.
+
+Avoid repeatedly requesting indexing without improving the page.
+
+7. Discovered – Currently Not Indexed
+
+This means Google knows about the URL but has not crawled it yet.
+
+Workflow
+Check whether the URL is accessible.
+Add strong internal links from relevant pages.
+Include the URL in the XML sitemap.
+Check robots.txt.
+Make sure the page returns 200 OK.
+Check that there is no noindex.
+Improve page quality if necessary.
+Test Live URL.
+Request Indexing.
+8. General Indexing Checklist
+
+Before requesting indexing, check the following:
+
+☐ Page returns 200 OK
+
+☐ Page is accessible to Google
+
+☐ Page is not blocked by robots.txt
+
+☐ Page does not contain noindex
+
+☐ Correct canonical is implemented
+
+☐ Google-selected canonical is appropriate
+
+☐ Page has unique and useful content
+
+☐ Page has relevant internal links
+
+☐ URL is included in the XML sitemap
+
+☐ HTTPS URL is correct
+
+☐ No unnecessary redirect chain
+
+☐ No major technical errors
+
+9. Recommended GSC Workflow
+
+Use this workflow for most technical indexing problems:
+
+1. Find the affected URL
+
+↓
+
+2. Inspect the URL in GSC
+
+↓
+
+3. Identify the actual issue
+
+↓
+
+4. Fix the issue on the website
+
+↓
+
+5. Test Live URL
+
+↓
+
+6. Confirm Google can access the corrected page
+
+↓
+
+7. Check canonical, indexability and status code
+
+↓
+
+8. Request Indexing if appropriate
+
+↓
+
+9. Wait for Google to recrawl
+
+↓
+
+10. Recheck URL Inspection
+
+↓
+
+11. Monitor the GSC Pages report
+
+10. Important Rule
+
+Do not treat every GSC error by simply clicking Request Indexing.
+
+Request Indexing comes AFTER the website problem has been fixed.
+
+The basic process is:
+
+Identify → Fix → Test Live → Verify → Request Indexing → Wait → Monitor
+
+11. Quick Decision Table
+GSC Issue	Website Action	Request Indexing?
+Canonical issue	Fix canonical	Yes, after testing
+Page with redirect	Fix/confirm redirect	Index final URL
+404 – page should exist	Restore page	Yes
+404 – relevant replacement exists	301 redirect	Index new URL
+404 – permanently removed	Leave 404/410	No
+Crawled – not indexed	Improve/check page	Yes, after fixes
+Discovered – not indexed	Improve crawlability	Yes, after fixes
+Valid indexed page	No action needed	Usually no
+12. Final SEO Workflow
+Technical Fix
+
+Website → Fix the issue
+
+Validation
+
+GSC → URL Inspection → Test Live URL
+
+Verification
+
+Check status + canonical + indexability
+
+Indexing
+
+Request Indexing
+
+Monitoring
+
+Wait for Google → Recheck GSC
+
+This should be the standard workflow whenever you are working on Google Search Console indexing issues.
