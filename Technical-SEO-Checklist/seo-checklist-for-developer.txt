@@ -1,0 +1,182 @@
+Technical SEO Checklist for Developers
+A practical guide to making your website easy for search engines to find, crawl, index and rank
+Contents
+1. Introduction	3
+Why technical SEO still matters	3
+Why it is needed	3
+Information Architecture (IA)	3
+The core question: can search engines access your site?	3
+2. What Search Engines Evaluate	3
+3. Foundations	4
+Server logging	4
+Analytics	4
+Tag managers	4
+Thin content	4
+Response codes	4
+4. Canonicalization (Avoiding Duplicate Content)	4
+The home page must have a single URL	4
+Pagination has one start page	5
+No hard-coded relative links	5
+No query parameters for analytics	5
+Never, under any circumstances	5
+5. On-Page Elements the CMS Must Support	5
+Title	5
+Meta tags	5
+Open Graph Protocol (OGP)	6
+Image ALT attributes	6
+URLs	6
+6. Page and Site Structure	6
+Standard page structure	6
+Site structure	6
+7. Site Performance	6
+Basic optimizations	6
+Defer blocking JavaScript and CSS	7
+Resource hints	7
+8. JavaScript and Rendering	7
+Don't hide content you want to rank	7
+Show content before the load event	7
+Use indexable URLs	7
+Server-side rendering (SSR)	7
+Pre-rendering	8
+Progressive web apps (PWAs)	8
+9. Quick Summary Checklist	8
+
+
+
+1. Introduction
+Why technical SEO still matters
+Two kinds of SEO work bring users from search engines to a website:
+•	On-page / technical SEO covers everything on the page and site that developers and webmasters directly control: code, servers, content structure and settings.
+•	Off-page SEO covers what happens outside your site, mainly links from other sites.
+This guide focuses on the first kind, technical SEO.
+Why it is needed
+Web servers and search engines are fast but not smart. Neither understands your intent. Technical SEO closes the gap between how your site is built and how search engines read it.
+Search engines don't fully understand users. It is hard for them to work out what someone means by a query, let alone match it to a page's purpose. Good SEO helps bridge that gap.
+Information Architecture (IA)
+IA is the way documents are organized and connected. In IA terms, a website is a dynamic, linked structure of content that bots can read. Technical SEO is mostly IA applied to search.
+The core question: can search engines access your site?
+Ask whether search engines can find, crawl and index it. Common problems:
+•	Redirects can tell a crawler to ignore you.
+•	JavaScript frameworks can hide content or create duplicates.
+•	A wrong robots.txt file can block your whole site.
+2. What Search Engines Evaluate
+Factor	What it means	Developer's role
+User experience	Google and Bing look at site speed, interface, mobile usability and many small signals of a good experience.	Technology affects all of these, so build for speed and usability.
+Relevance	Keywords matter because people search with words. The right words in the right places create relevance.	Set up the site and server so those words can be placed properly.
+Authority	Links matter a great deal.	Make sure your implementation never reduces link value or validity.
+
+3. Foundations
+Server logging
+Most servers are configured correctly by default, but verify the following:
+•	Logs record, at minimum, the referring domain and URL, date, time, response code, user agent, requested resource, file size and request type. The IP address helps too.
+•	Relevant errors are logged.
+•	Log files are never deleted. Archive them instead. If they are huge, delete them after a year, or let the SEO team pay for archive storage such as Amazon Glacier.
+Why it matters: logs show how search bots actually crawl your site, which no other tool reveals as accurately.
+Analytics
+Put the right analytics tags on every page and throughout every funnel (checkout, sign-up and so on). Missing tags mean missing data.
+Tag managers
+Tag managers are a mixed blessing.
+•	Good: marketing teams can add and edit third-party widgets, JSON-LD structured data and analytics code without a developer.
+•	Risk: uncontrolled changes can slow the site or break things, so set rules for who can publish tags.
+Thin content
+Thin content (pages with little real value) may not be a foundational issue, but it is hard to fix later. Plan for substantial, useful content from the start.
+Response codes
+Response codes (200, 301, 302, 404, 410, 500 and so on) tell browsers and bots how to treat a page. Always return the correct one. For example, a permanently moved page should return 301, not 302, and a missing page should return 404, not a "soft" 200 error page.
+4. Canonicalization (Avoiding Duplicate Content)
+Nothing damages indexing like duplicate content, and canonicalization problems create it faster than anything else.
+The home page must have a single URL
+The home page should be "/" and nothing else. It should not also be reachable as:
+•	http://www.abc.com/index.html
+•	http://www.abc.com/default.aspx
+•	/index.php
+Also make sure that:
+•	The www and non-www versions are not both live. Pick one and redirect the other.
+•	The http and https versions are not both live. If you use SSL, redirect every http address straight to the correct https home page.
+•	The page has a clear title, such as "ABC Home Page – ABC.com".
+Pagination has one start page
+The link to page one of a paginated series should always point to the clean, untagged URL (for example /products/, not /products/?page=1).
+No hard-coded relative links
+Avoid links like this:
+<a href="~">
+
+They can generate endlessly growing URLs, such as:
+/en-us/
+/en-US/US-Distribution
+/en-US/~/link.aspx?_id=6F0F...&_z=z
+/en-US/~/~/link.aspx?_id=B682...&_z=z
+
+Crawlers can get trapped in these loops, which wastes crawl budget and creates duplicate pages.
+No query parameters for analytics
+Do not tag navigation with query parameters (like ?source=menu) to track clicks. Each variation becomes a separate URL, which creates duplicates. Use event-based tracking instead.
+Never, under any circumstances
+•	Use robots.txt or meta robots to hide duplicate content. This breaks your link structure, does not actually hide the content, and costs you authority. Use canonical tags or redirects instead.
+•	Point rel=canonical for one set of duplicates at different target pages. Duplicates should all agree on a single canonical target.
+5. On-Page Elements the CMS Must Support
+The CMS should let authors edit each of the following without developer help.
+Title
+•	The title element is the strongest on-page ranking signal.
+•	Each page needs exactly one <title></title>, and authors must be able to edit it.
+Meta tags
+•	Make the meta description and other tags editable in the CMS.
+•	The meta keywords tag is useless and has been since about 2004. Remove it. If someone objects, that is a sign to find a better SEO.
+Open Graph Protocol (OGP)
+Facebook uses OGP tags to build the text, image and title of shared links. Without them, Facebook guesses, and it may pick the wrong image or text.
+•	OGP tags let authors control how content appears when shared, which can raise click-through.
+•	Default them to the page title, meta description and featured image, then let authors override them.
+•	Include at least og:title, og:type, og:image and og:url.
+Image ALT attributes
+ALT text is another strong ranking signal, and it also serves accessibility. Authors should be prompted to enter ALT text at the moment they upload each image.
+URLs
+Keywords in URLs do not directly boost rankings, but Google and Bing bold matching keywords in results, which can improve clicks. Keep URLs readable and descriptive.
+6. Page and Site Structure
+Standard page structure
+•	Use one H1 per page.
+•	Make H2, H3 and H4 available to authors.
+•	Use `<p>` elements for paragraphs, not line breaks or DIVs.
+•	Add relevant structured data (schema markup).
+Site structure
+•	Readable URLs: clear, logical paths that reflect the site hierarchy.
+•	Subdomain vs. subfolder: subfolders (abc.com/blog) generally consolidate authority better than subdomains (blog.abc.com).
+•	No nofollow on internal links: it wastes link value inside your own site.
+•	Clickable navigation: top-level menu items should lead somewhere real, not to #.
+•	All content reachable through links: every page should be accessible by clicking, without needing search boxes or forms.
+7. Site Performance
+Speed is one of the easiest wins because it improves SEO and conversion rates.
+Basic optimizations
+•	Compress all images and use the right format: PNG for line art, icons and images with few colors; JPG for photographs.
+•	Turn on disk caching. If it causes odd behavior, find and fix the cause rather than disabling it. Memory caching or tools like Varnish go further.
+•	Use GZIP compression.
+•	Move long CSS/JS to separate files (anything over roughly 10–20 lines) so browsers can cache them.
+•	Minify JS and CSS.
+•	Set far-future expires headers for files that rarely change (icons, carousel images, CSS, JS). Match the duration to how often you actually change them. If CSS changes weekly, do not set a six-month expiry.
+Defer blocking JavaScript and CSS
+Google wants pages to render immediately. A huge script or stylesheet near the top of the page halts rendering until it is downloaded and parsed. Defer or load such files asynchronously.
+Resource hints
+Technique	Use	Example
+DNS prefetch	Resolves external domains early when loading assets from another site.	<link rel="dns-prefetch" href="//cdn.example.com">
+Prefetch	Preloads your most popular resources (fonts, scripts).	<link rel="prefetch" href="fonts.woff">
+Prerender	Loads your most popular pages in the background for instant navigation.	<link rel="prerender" href="products.html">
+
+8. JavaScript and Rendering
+Don't hide content you want to rank
+Content that is not visible to crawlers cannot rank. Make sure important text is present when the page loads, not only after user interaction.
+Show content before the load event
+Content that appears only after the load event may be missed by search engines.
+Use indexable URLs
+Every distinct piece of content needs its own real URL, not just a # fragment or a state change in JavaScript.
+Server-side rendering (SSR)
+React, Angular 2+ and other modern frameworks support SSR, where the server sends fully built HTML. This is the most reliable option for SEO.
+Pre-rendering
+If you have inherited an older site (Angular 1.x, an older React version and so on), SSR may not be possible. Use pre-rendering: generate static HTML snapshots for search bots.
+Progressive web apps (PWAs)
+Google is enthusiastic about PWAs. Trendiness aside, if your site is "app-like," a PWA can be SEO-friendly when done right, and it brings other benefits such as offline access and faster repeat visits.
+9. Quick Summary Checklist
+☐	Server logs capture all required fields and are archived
+☐	Analytics on every page and funnel
+☐	Correct response codes everywhere
+☐	One canonical URL per page (home page = "/")
+☐	One editable title per page; no meta keywords
+☐	Editable OGP tags and image ALT text
+☐	Single H1 with proper heading hierarchy
+☐	Images compressed, caching and GZIP on, JS/CSS minified
+☐	Content visible to crawlers (SSR or pre-rendering)
