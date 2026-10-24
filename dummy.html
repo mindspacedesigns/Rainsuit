@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO, GEO & AEO Services in Bangalore | Mars Web Solution</title>
+<meta name="description" content="Technical SEO, local SEO, schema markup and AI answer-engine optimization (GEO and AEO) from Mars Web Solution, Bangalore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14183F;--ink2:#3B4170;--paper:#F4F6FB;--card:#fff;--line:#DDE2F0;--seo:#2F5BFF;--geo:#00A88F;--aeo:#FF7A1A;--sun:#FFD25E}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.1;letter-spacing:-.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:80px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5vw,3.9rem);font-weight:800}
+.hero p{color:#C7CCEE;margin:22px 0 30px;max-width:52ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--sun);color:var(--ink)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #4A5190}
+.stats{display:flex;gap:30px;margin-top:38px;color:#C7CCEE;font-size:.95rem}
+.stats b{display:block;font-family:'Bricolage Grotesque';font-size:1.7rem;color:#fff}
+
+/* the three layers of search */
+.layers{position:relative;height:420px}
+.layer{position:absolute;left:0;right:0;background:#fff;color:var(--ink);border-radius:18px;padding:18px 20px;box-shadow:0 18px 40px rgba(0,0,0,.35);border-top:6px solid}
+.layer small{font-weight:700;display:block;margin-bottom:6px}
+.layer p{color:var(--ink2);margin:0;font-size:.92rem;line-height:1.5;max-width:none}
+.l1{top:0;border-color:var(--seo);transform:rotate(-2deg)}
+.l1 small{color:var(--seo)}
+.l2{top:128px;border-color:var(--geo);left:30px;transform:rotate(1.5deg)}
+.l2 small{color:var(--geo)}
+.l3{top:262px;border-color:var(--aeo);left:8px;transform:rotate(-1deg)}
+.l3 small{color:#C25500}
+.url{color:#1A7A3C;font-size:.8rem}
+.ttl{color:var(--seo);font-weight:700;font-size:1.02rem}
+.cite{display:inline-block;background:#E0F6F2;color:#05735F;border-radius:6px;padding:0 7px;font-size:.78rem;font-weight:700;margin-left:4px}
+.snip{background:#FFF1E3;border-radius:10px;padding:10px 12px;margin-top:6px}
+
+/* section heads */
+.head{max-width:680px;margin-bottom:38px}
+.head h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:800}
+.head p{color:var(--ink2);margin-top:14px}
+
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{font:inherit;font-weight:700;border:2px solid var(--line);background:#fff;color:var(--ink);padding:12px 22px;border-radius:14px;cursor:pointer}
+.tab[aria-selected="true"]{color:#fff;border-color:transparent}
+.tab[data-c="seo"][aria-selected="true"]{background:var(--seo)}
+.tab[data-c="geo"][aria-selected="true"]{background:var(--geo)}
+.tab[data-c="aeo"][aria-selected="true"]{background:#D45F00}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px;border-left:8px solid}
+.panel.on{display:block}
+.panel[data-c="seo"]{border-left-color:var(--seo)}
+.panel[data-c="geo"]{border-left-color:var(--geo)}
+.panel[data-c="aeo"]{border-left-color:var(--aeo)}
+.panel h3{font-size:1.6rem;margin-bottom:10px}
+.panel .lead{color:var(--ink2);max-width:68ch;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.item{background:var(--paper);border-radius:14px;padding:18px 20px}
+.item b{display:block;margin-bottom:4px}
+.item span{color:var(--ink2);font-size:.95rem}
+.note{margin-top:22px;background:#FFF8DF;border-radius:12px;padding:14px 18px;font-size:.95rem}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.cap{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.cap h3{font-size:1.2rem;margin-bottom:8px}
+.cap p{color:var(--ink2);font-size:.97rem}
+.cap .tag{display:inline-block;font-size:.8rem;font-weight:700;padding:3px 11px;border-radius:99px;margin-bottom:12px;background:#E7ECFF;color:var(--seo)}
+.cap .tag.g{background:#E0F6F2;color:#05735F}
+.cap .tag.a{background:#FFEBD9;color:#A34700}
+
+/* process */
+.steps{counter-reset:s;display:grid;gap:0;max-width:760px}
+.step{position:relative;padding:0 0 30px 64px;border-left:3px dashed #B9C1E6;margin-left:20px}
+.step:last-child{border-color:transparent;padding-bottom:0}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:-22px;top:-4px;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800;font-family:'Bricolage Grotesque'}
+.step b{font-family:'Bricolage Grotesque';font-size:1.2rem}
+.step p{color:var(--ink2)}
+
+/* local */
+.dark{background:var(--ink);color:#fff}
+.dark .head p{color:#C7CCEE}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid #4A5190;padding:8px 18px;border-radius:99px;font-weight:500}
+.chips span:first-child{background:var(--sun);color:var(--ink);border-color:var(--sun);font-weight:700}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px;padding:0 22px}
+summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:1.5rem;line-height:1;color:var(--seo);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--ink2);padding-bottom:20px;max-width:75ch}
+
+/* cta */
+.cta{text-align:center;background:linear-gradient(135deg,var(--seo),#6A3BFF);color:#fff;border-radius:28px;padding:56px 24px}
+.cta h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800}
+.cta p{margin:14px auto 26px;max-width:52ch;color:#E3E7FF}
+
+.trend{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.tr{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.tr .hot{align-self:flex-start;background:var(--sun);color:var(--ink);font-weight:700;font-size:.8rem;padding:3px 12px;border-radius:99px}
+.tr h3{font-size:1.3rem}
+.tr p{color:var(--ink2);font-size:.97rem}
+.tr .do{margin-top:auto;border-top:1px dashed var(--line);padding-top:12px;font-size:.93rem}
+.tr .do b{color:var(--seo)}
+.check{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.col{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px}
+.col h3{font-size:1.25rem;margin-bottom:14px}
+.col ul{list-style:none}
+.col li{padding:8px 0 8px 32px;position:relative;color:var(--ink2);font-size:.97rem;border-bottom:1px solid #EEF1F8}
+.col li:last-child{border:0}
+.col li::before{content:'✓';position:absolute;left:0;top:7px;width:22px;height:22px;border-radius:50%;background:#E0F6F2;color:#05735F;display:grid;place-items:center;font-size:.8rem;font-weight:800}
+.col.b li::before{background:#E7ECFF;color:var(--seo)}
+.col.c li::before{background:#FFEBD9;color:#A34700}
+.rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.rel a{display:block;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;text-decoration:none;transition:transform .2s,border-color .2s}
+.rel a:hover{transform:translateY(-4px);border-color:var(--seo)}
+.rel b{font-family:'Bricolage Grotesque';font-size:1.2rem;display:block;margin-bottom:6px}
+.rel span{color:var(--ink2);font-size:.95rem;display:block}
+.rel em{display:inline-block;margin-top:12px;font-style:normal;font-weight:700;color:var(--seo)}
+.txt{max-width:75ch;color:var(--ink2)}
+.txt a,.lead a,.cap a,.head a{color:var(--seo);font-weight:700;text-underline-offset:3px}
+.dark .head a{color:var(--sun)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.layers{height:400px}.panel{padding:24px}.stats{flex-wrap:wrap;gap:20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Be found on Google, and be quoted by AI.</h1>
+      <p>Mars Web Solution combines technical SEO, local SEO, schema markup and answer-engine optimization (GEO and AEO). Search engines index your pages quickly. AI answer engines cite your business accurately. Need a faster site first? See our <a href="https://www.marswebsolution.com/web-design-company-bangalore.html" style="color:var(--sun);font-weight:700">web design</a> and <a href="https://www.marswebsolution.com/ecommerce-website-development-company-bangalore.html" style="color:var(--sun);font-weight:700">e-commerce development</a> services.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Get a free SEO audit</a>
+        <a class="btn ghost" href="#layers">See the three layers</a>
+      </div>
+      <div class="stats">
+        <div><b>16+</b>years of experience</div>
+        <div><b>1200+</b>live projects</div>
+        <div><b>4.9★</b>rated on Google</div>
+      </div>
+    </div>
+    <div class="layers" aria-hidden="true">
+      <div class="layer l1"><small>SEO: ranked result</small><div class="ttl">Best SEO Company in Bangalore | Mars Web Solution</div><div class="url">marswebsolution.com › services › seo</div><p>Technical audits, keyword architecture and local SEO for Bangalore businesses.</p></div>
+      <div class="layer l2"><small>GEO: AI overview</small><p>Mars Web Solution is a Bangalore agency that builds structured, citable pages for search and AI engines.<span class="cite">cited</span></p></div>
+      <div class="layer l3"><small>AEO: featured snippet</small><div class="snip"><p><b>How long does SEO take?</b> Most websites see meaningful movement in 3 to 6 months.</p></div></div>
+    </div>
+  </div>
+</header>
+
+<section id="layers">
+  <div class="wrap">
+    <div class="head">
+      <h2>One content system, three ways to be found</h2>
+      <p>Choose a layer to see what we do and how it supports the other two.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-c="seo" aria-selected="true">SEO</button>
+      <button class="tab" role="tab" data-c="geo" aria-selected="false">GEO</button>
+      <button class="tab" role="tab" data-c="aeo" aria-selected="false">AEO</button>
+    </div>
+
+    <div class="panel on" data-c="seo" role="tabpanel">
+      <h3>Search Engine Optimization</h3>
+      <p class="lead">We optimize website code, page speed and content for search engines. Targeted keywords bring high-intent buyers straight to your site, and monthly reports show rankings and real lead results.</p>
+      <div class="grid">
+        <div class="item"><b>Canonical URLs</b><span>Strict canonical definitions prevent duplicate content across tracking parameters.</span></div>
+        <div class="item"><b>XML sitemaps</b><span>Generated automatically and submitted to Google Search Console and Bing.</span></div>
+        <div class="item"><b>Semantic headings</b><span>An H1 to H4 tree with zero skipped levels guides crawlers through every section.</span></div>
+        <div class="item"><b>OpenGraph and Twitter Cards</b><span>Rich link previews on WhatsApp, LinkedIn and Facebook.</span></div>
+        <div class="item"><b>Meta tags and image alt text</b><span>Clear meta tags for crawlers and optimized image tags.</span></div>
+        <div class="item"><b>Core Web Vitals</b><span>LCP under 1.8s, INP under 100ms and CLS 0.00, because Google evaluates speed and visual stability.</span></div>
+      </div>
+    </div>
+
+    <div class="panel" data-c="geo" role="tabpanel">
+      <h3>Generative Engine Optimization</h3>
+      <p class="lead">Generative AI overviews such as Google Gemini, Perplexity and ChatGPT Search rely on unambiguous structured data to cite web pages as authoritative factual answers. We build your pages to be read and cited by them.</p>
+      <div class="grid">
+        <div class="item"><b>Deep JSON-LD schema graphs</b><span>Service, LocalBusiness, ProfessionalService and Organization entities linked together.</span></div>
+        <div class="item"><b>Entity-first SEO</b><span>Organization and service entities define who you are and what you offer.</span></div>
+        <div class="item"><b>Semantic heading taxonomy</b><span>Strictly descending H1 to H4 headings give clear topical hierarchies.</span></div>
+        <div class="item"><b>Localized Bengaluru intent</b><span>Content matches search patterns across Koramangala, Whitefield and Electronic City.</span></div>
+      </div>
+      <p class="note">Result: search bots and AI answer engines can index and cite your business accurately.</p>
+    </div>
+
+    <div class="panel" data-c="aeo" role="tabpanel">
+      <h3>Answer Engine Optimization</h3>
+      <p class="lead">We publish informative industry content and add Schema.org structured data to capture Google Featured Snippets and rich results.</p>
+      <div class="grid">
+        <div class="item"><b>FAQPage schema</b><span>Question-and-answer markup unlocks rich search results.</span></div>
+        <div class="item"><b>Featured snippets</b><span>Content structured so Google can lift a clear answer.</span></div>
+        <div class="item"><b>BreadcrumbList schema</b><span>Shows your page hierarchy directly in search results.</span></div>
+        <div class="item"><b>Rich snippets for services</b><span>JSON-LD enables enhanced listings for services and FAQs.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <h2>What is included</h2>
+      <p>Our core SEO services, with the layer each one supports.</p>
+    </div>
+    <div class="caps">
+      <div class="cap"><span class="tag">SEO</span><h3>Technical SEO audits and speed fixes</h3><p>We diagnose and resolve crawl errors, broken links, slow Core Web Vitals, duplicate metadata and indexing blockers.</p></div>
+      <div class="cap"><span class="tag">SEO</span><h3>High-intent keyword architecture</h3><p>We identify high-commercial-value phrases that paying customers use when they are ready to buy.</p></div>
+      <div class="cap"><span class="tag">SEO</span><h3>Local SEO and Google Maps</h3><p>We help you win Bangalore "near me" searches, optimize your Google Business Profile and collect authoritative local citations.</p></div>
+      <div class="cap"><span class="tag a">AEO + GEO</span><h3>Content marketing and schema markup</h3><p>We publish industry content and inject Schema.org data to capture featured snippets and AI citations.</p></div>
+      <div class="cap"><span class="tag g">GEO</span><h3>Entity and schema graph</h3><p>One JSON-LD graph links your organization and service entities for search and AI engines.</p></div>
+      <div class="cap"><span class="tag">SEO</span><h3>Transparent monthly reporting</h3><p>Keyword rank movements, organic traffic growth and conversion counts in every report.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <h2>What is trending in search right now</h2>
+      <p>Search is no longer ten blue links. AI summaries, voice questions and local results all decide who gets seen. Here is what matters and how we respond.</p>
+    </div>
+    <div class="trend">
+      <div class="tr"><span class="hot">Hot</span><h3>AI Overviews and zero-click search</h3><p>Google increasingly answers questions on the results page itself. Pages with clear, structured answers are the ones that get quoted and linked.</p><p class="do"><b>Our response:</b> answer-first content, FAQPage schema and clean headings so your page becomes the source.</p></div>
+      <div class="tr"><span class="hot">Hot</span><h3>Generative Engine Optimization (GEO)</h3><p>Gemini, Perplexity and ChatGPT Search cite pages that state facts unambiguously. Brand and entity signals now matter as much as keywords.</p><p class="do"><b>Our response:</b> a linked JSON-LD entity graph for your organization, services and location.</p></div>
+      <div class="tr"><span class="hot">Hot</span><h3>E-E-A-T and trust signals</h3><p>Experience, expertise, authoritativeness and trust shape how Google judges content quality. Real authors, real projects and clear contact details help.</p><p class="do"><b>Our response:</b> author pages, case studies, reviews and consistent business details across the web.</p></div>
+      <div class="tr"><span class="hot">Rising</span><h3>Interaction to Next Paint (INP)</h3><p>INP replaced older responsiveness metrics in Core Web Vitals. Slow taps and laggy menus now cost rankings and conversions.</p><p class="do"><b>Our response:</b> lean scripts and deferred JavaScript. See how we build fast sites in <a href="https://www.marswebsolution.com/web-design-company-bangalore.html">web design</a>.</p></div>
+      <div class="tr"><span class="hot">Rising</span><h3>Voice and conversational queries</h3><p>People ask full questions like "best SEO company near me". Natural-language headings and short direct answers match how they speak.</p><p class="do"><b>Our response:</b> question-based subheadings and concise answers under each one.</p></div>
+      <div class="tr"><span class="hot">Local</span><h3>Google Business Profile and reviews</h3><p>Map pack results depend on a complete profile, consistent name, address and phone details, and fresh reviews.</p><p class="do"><b>Our response:</b> profile optimization, citation building and a simple review-request flow.</p></div>
+      <div class="tr"><span class="hot">Rising</span><h3>Topical authority and content clusters</h3><p>Ranking for one keyword is not enough. Covering a subject in depth, with pages linked together, signals expertise.</p><p class="do"><b>Our response:</b> pillar pages and supporting articles linked by clear internal links.</p></div>
+      <div class="tr"><span class="hot">Always</span><h3>Online store SEO</h3><p>Product pages need unique descriptions, Product schema, fast images and clean category structures to win shopping searches.</p><p class="do"><b>Our response:</b> SEO built into every <a href="https://www.marswebsolution.com/ecommerce-website-development-company-bangalore.html">e-commerce website we develop</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <h2>The complete SEO checklist we work through</h2>
+      <p>Every project covers on-page, technical and off-page SEO. Nothing is left to chance.</p>
+    </div>
+    <div class="check">
+      <div class="col b"><h3>On-page SEO</h3><ul>
+        <li>One clear H1 and a logical H2 to H4 outline</li>
+        <li>Title tags and meta descriptions written for clicks</li>
+        <li>Keyword placement in headings, intro and URLs</li>
+        <li>Descriptive image alt text and file names</li>
+        <li>Internal links between related pages</li>
+        <li>FAQ blocks answering real customer questions</li></ul></div>
+      <div class="col"><h3>Technical SEO</h3><ul>
+        <li>Crawl and indexing audit in Search Console</li>
+        <li>Canonical tags and clean redirects</li>
+        <li>XML sitemap and robots.txt review</li>
+        <li>Core Web Vitals: LCP, INP and CLS</li>
+        <li>Mobile-first, accessible layouts</li>
+        <li>JSON-LD: Organization, LocalBusiness, FAQPage, BreadcrumbList</li></ul></div>
+      <div class="col c"><h3>Off-page and local SEO</h3><ul>
+        <li>Google Business Profile setup and posts</li>
+        <li>Consistent name, address and phone listings</li>
+        <li>Quality backlinks from relevant sites</li>
+        <li>Review collection and responses</li>
+        <li>Brand mentions and local citations</li>
+        <li>Social profiles linked to your website</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>How we migrate without losing rankings</h2>
+      <p>Moving from WordPress or PHP? This is our protocol.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><b>Inventory every URL and backlink</b><p>We start with a complete list of existing pages and links.</p></div>
+      <div class="step"><b>Map old routes to clean new ones</b><p>Permanent 301 redirects connect every legacy endpoint.</p></div>
+      <div class="step"><b>Keep canonicals and schema</b><p>We preserve verified canonical tags and existing schema markup.</p></div>
+      <div class="step"><b>Submit sitemaps on launch day</b><p>Updated XML sitemaps go to Google Search Console for a smooth transition.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="head">
+      <h2>Local authority across Bangalore</h2>
+      <p>Granular location signaling builds ranking relevance across South India's major enterprise hubs.</p>
+    </div>
+    <div class="chips">
+      <span>Bangalore</span><span>Jayanagar</span><span>Koramangala</span><span>Whitefield</span><span>Electronic City</span><span>HSR Layout</span><span>BTM Layout</span><span>Indiranagar</span><span>JP Nagar</span><span>Banashankari</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head"><h2>Questions we hear most</h2></div>
+    <details><summary>What is the difference between SEO and SEM?</summary><p>SEO improves your unpaid, organic rankings in search results.</p></details>
+    <details><summary>How long does SEO take to show results?</summary><p>Most websites see meaningful movement in 3 to 6 months, and competitive keywords can take longer. Results depend on competition, site quality and consistent effort.</p></details>
+    <details><summary>Can anyone guarantee a number one ranking on Google?</summary><p>No. Google's rankings depend on many factors outside any agency's control, so guaranteed rankings are a warning sign.</p></details>
+    <details><summary>What is local SEO and why does it matter?</summary><p>Local SEO helps a business appear in searches tied to a location, such as near me queries and Google Maps. A complete Google Business Profile, consistent contact details and reviews are key factors.</p></details>
+    <details><summary>What are on-page, off-page and technical SEO?</summary><p>On-page SEO covers content and page elements, off-page SEO covers external signals such as backlinks, and technical SEO covers site speed, crawlability, indexing and structured data.</p></details>
+    <details><summary>How does your technical SEO ensure visibility across Bangalore hubs?</summary><p>It goes beyond basic meta tags. We implement Schema.org JSON-LD graphs (Organization, LocalBusiness, ProfessionalService, FAQPage, BreadcrumbList), automated XML sitemaps submitted to Google Search Console and Bing Webmaster Tools, canonical URL management and mobile-friendly semantic headings that help search bots and AI answer engines index and cite your business accurately.</p></details>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <h2>SEO works best on a site built for it</h2>
+      <p class="txt">Rankings start with the website itself. A slow or messy site wastes every SEO rupee. That is why <a href="https://www.marswebsolution.com/">Mars Web Solution</a> handles design, development and search together.</p>
+    </div>
+    <div class="rel">
+      <a href="https://www.marswebsolution.com/web-design-company-bangalore.html"><b>Web Design Company in Bangalore</b><span>Fast, mobile-friendly, SEO-ready websites with clean code and built-in schema.</span><em>Explore web design</em></a>
+      <a href="https://www.marswebsolution.com/ecommerce-website-development-company-bangalore.html"><b>E-Commerce Website Development</b><span>Online stores with product schema, quick pages and checkout built to convert.</span><em>Explore e-commerce</em></a>
+      <a href="https://www.marswebsolution.com/"><b>Mars Web Solution Home</b><span>16+ years, 1200+ live projects, full digital support under one roof.</span><em>Visit our homepage</em></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Ready to rank, and to be cited?</h2>
+      <p>Contact Mars Web Solution for a complete roadmap and transparent estimate.</p>
+      <a class="btn" href="tel:+918088230479">Call +91 80882 30479</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+      panels.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-c')===t.getAttribute('data-c'))});
+    });
+  });
+})();
+</script>
+</body>
+</html>
