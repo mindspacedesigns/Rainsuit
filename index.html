@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frequently Asked Questions – Chesapeake</title>
+<style>
+  :root{--green:#16332f;--text:#16332f;--line:#8a8f8d;--hero-text:#d9dedb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Syne","Outfit","Segoe UI",Arial,sans-serif;background:#fff;color:var(--text);min-height:100vh}
+  .hero{background:var(--green);height:164px;display:flex;align-items:center}
+  .wrap{width:100%;max-width:1312px;margin:0 auto;padding:0 288px}
+  .hero h1{font-weight:400;font-size:26px;letter-spacing:.2px;color:var(--hero-text);text-transform:uppercase;transform:scaleX(1.06);transform-origin:left}
+  main{padding-top:62px}
+  .section-label{font-size:10px;letter-spacing:.2px;text-transform:uppercase;padding-bottom:13px;border-bottom:1px solid var(--line);width:680px}
+  .faq{width:383px;margin-left:297px;margin-top:20px}
+  .item{border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:1px solid var(--line)}
+  .q{width:100%;background:none;border:0;font:inherit;color:inherit;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:10px 0 8px;text-transform:uppercase;font-size:17px;line-height:17px;letter-spacing:.1px}
+  .item:first-child .q{padding-top:12px}
+  .icon{flex:none;width:15px;height:15px;border-radius:50%;background:var(--green);position:relative}
+  .icon::before,.icon::after{content:"";position:absolute;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform .25s}
+  .icon::before{width:7px;height:1px}
+  .icon::after{width:1px;height:7px}
+  .item.open .icon::after{transform:translate(-50%,-50%) scaleY(0)}
+  .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+  .item.open .a{grid-template-rows:1fr}
+  .a>div{overflow:hidden}
+  .a p{font-size:9.5px;line-height:13.5px;padding:21px 0 17px;letter-spacing:.1px}
+  .item.open .q{padding-bottom:0}
+  .spacer{height:30px}
+  .chat{position:fixed;right:18px;bottom:8px;width:29px;height:29px;border-radius:50%;background:var(--green);display:grid;place-items:center;border:0;cursor:pointer}
+  .chat::before{content:"";width:9px;height:8px;border:1px solid #fff;border-radius:50%}
+  @media(max-width:1000px){
+    .wrap{padding:0 24px}
+    .section-label{width:100%}
+    .faq{width:100%;margin-left:0}
+    main .wrap{padding:0 24px}
+  }
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap"><h1>Frequently Asked Questions</h1></div></header>
+<main>
+  <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+  <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+  <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+   <div class="wrap">
+    <div class="section-label">About Chesapeake</div>
+    <div class="faq" id="faq">
+      <div class="item open">
+        <button class="q" aria-expanded="true">What does Chesapeake do?<span class="icon"></span></button>
+        <div class="a"><div><p>Chesapeake is a specialty wood supply and solutions partner. We stock and distribute premium plywood, veneers, cores, and architectural panels — from fire-rated and marine-grade materials to luxury decorative surfaces — serving manufacturers and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Who are Chesapeake’s customers?<span class="icon"></span></button>
+        <div class="a"><div><p>We serve manufacturers, architects, millworkers, and builders across North America.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What makes Chesapeake different from other suppliers?<span class="icon"></span></button>
+        <div class="a"><div><p>Deep inventory, specialty product knowledge, and a service-first approach to every order.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">When was Chesapeake founded?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your founding year and history here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">Where are you located?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your location details here.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">What is your phone number?<span class="icon"></span></button>
+        <div class="a"><div><p>Add your phone number here.</p></div></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+
+</main>
+<button class="chat" aria-label="Chat"></button>
+<script>
+  document.querySelectorAll('.item').forEach(function(item){
+    item.querySelector('.q').addEventListener('click',function(){
+      var open=item.classList.toggle('open');
+      this.setAttribute('aria-expanded',open);
+    });
+  });
+</script>
+</body>
+</html>
