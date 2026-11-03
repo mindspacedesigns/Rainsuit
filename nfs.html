@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Solutions – Simplifying Loans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1a55cc;
+    --white: #ffffff;
+    --soft: #d5def0;
+    --accent: #f0a44b;
+    --line: rgba(255, 255, 255, 0.35);
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    --pad: clamp(1.25rem, 10.2vw, 8.5rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; }
+
+  body {
+    font-family: var(--serif);
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(2.5rem, 5vw, 4.5rem) var(--pad) 0;
+    background-color: var(--blue);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+    font: 600 0.7rem/1 var(--sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--soft);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.6rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  /* Headline + paragraph */
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 6.1vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  h1 .soft { color: var(--soft); }
+
+  .lead {
+    margin: 0;
+    max-width: 34rem;
+    font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+    line-height: 1.65;
+    color: #eaf0fb;
+  }
+
+  /* Services row */
+  .services {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .services-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .services small {
+    display: block;
+    margin-bottom: 0.45rem;
+    font: 600 0.62rem/1 var(--sans);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b9cdf5;
+  }
+  .services h2 {
+    margin: 0;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    background: var(--white);
+    color: #0f2f7a;
+    font: 600 0.68rem/1 var(--sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .btn svg { width: 0.9rem; height: 0.9rem; }
+
+  /* Tablet: slightly larger headline scaling */
+  @media (max-width: 900px) {
+    h1 { font-size: clamp(2.4rem, 9vw, 4.5rem); }
+  }
+
+  /* Mobile: stack the services row */
+  @media (max-width: 560px) {
+    .hero { padding-bottom: 0; }
+    .services-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 1.5rem;
+    }
+    .btn { width: 100%; justify-content: center; }
+  }
+
+  /* One entrance on load, skipped if the visitor prefers less motion */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">Financial Solutions</p>
+
+    <div class="intro">
+      <h1 class="reveal">
+        Simplifying Loans;<br>
+        <span class="soft">Empowering Your Future</span>
+      </h1>
+
+      <p class="lead reveal">
+        We provide personalized loan assistance for medical expenses, education,
+        family commitments and more. Explore your options, understand repayment
+        terms and navigate the application process with confidence.
+      </p>
+    </div>
+  </div>
+
+  <div class="services">
+    <div class="services-bar">
+      <div>
+        <small>Explore our services</small>
+        <h2>Find support for your next step</h2>
+      </div>
+      <a class="btn" href="#contact" id="contactBtn">
+        Get in touch
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 8h12M9 3l5 5-5 5"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Staggered fade-in on load
+  window.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".reveal").forEach(function (el, i) {
+      setTimeout(function () { el.classList.add("in"); }, 120 + i * 160);
+    });
+  });
+
+  // Smooth scroll to #contact if that section exists on your page
+  document.getElementById("contactBtn").addEventListener("click", function (e) {
+    var target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+</script>
+
+</body>
+</html>
