@@ -210,3 +210,126 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+"use client";
+
+import { useEffect, useState } from "react";
+import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
+
+const serif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
+
+const sans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
+});
+
+export default function SolutionSection() {
+  const [ready, setReady] = useState(false);
+
+  // Trigger the fade-in once mounted
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  const handleContactClick = (e) => {
+    const target = document.querySelector("#contact");
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const reveal = `transition-all duration-700 ease-out motion-reduce:transition-none ${
+    ready
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 translate-y-[14px] motion-reduce:opacity-100 motion-reduce:translate-y-0"
+  }`;
+
+  return (
+    <section
+      className={`${serif.className} flex min-h-screen flex-col justify-between bg-[#1a55cc] px-[clamp(1.25rem,10.2vw,8.5rem)] pt-[clamp(2.5rem,5vw,4.5rem)] text-white bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:44px_44px]`}
+    >
+      <div>
+        {/* Eyebrow */}
+        <p
+          className={`${sans.className} mb-4 flex items-center gap-3 text-[0.7rem] font-semibold uppercase leading-none tracking-[0.18em] text-[#d5def0] before:block before:h-px before:w-[1.6rem] before:bg-[#f0a44b] before:content-['']`}
+        >
+          Financial Solutions
+        </p>
+
+        {/* Headline + paragraph */}
+        <div className="grid grid-cols-1 gap-y-[clamp(1.25rem,2.5vw,2rem)]">
+          <h1
+            style={{ transitionDelay: "120ms" }}
+            className={`${reveal} text-[clamp(2.6rem,6.1vw,5.5rem)] font-bold leading-[1.05] tracking-[-0.02em] max-[900px]:text-[clamp(2.4rem,9vw,4.5rem)]`}
+          >
+            Simplifying Loans;
+            <br />
+            <span className="text-[#d5def0]">Empowering Your Future</span>
+          </h1>
+
+          <p
+            style={{ transitionDelay: "280ms" }}
+            className={`${reveal} max-w-[34rem] text-[clamp(0.95rem,1.15vw,1.05rem)] leading-[1.65] text-[#eaf0fb]`}
+          >
+            We provide personalized loan assistance for medical expenses, education,
+            family commitments and more. Explore your options, understand repayment
+            terms and navigate the application process with confidence.
+          </p>
+        </div>
+      </div>
+
+      {/* Services row */}
+      <div className="mt-[clamp(2.5rem,6vw,4.5rem)]">
+        <div className="flex items-end justify-between gap-5 border-b border-white/35 pb-[1.1rem] max-[560px]:flex-col max-[560px]:items-start max-[560px]:pb-6">
+          <div>
+            <small
+              className={`${sans.className} mb-[0.45rem] block text-[0.62rem] font-semibold uppercase leading-none tracking-[0.18em] text-[#b9cdf5]`}
+            >
+              Explore our services
+            </small>
+            <h2 className="text-[clamp(1.15rem,2vw,1.5rem)] font-semibold leading-[1.2]">
+              Find support for your next step
+            </h2>
+          </div>
+
+          <a
+            href="#contact"
+            onClick={handleContactClick}
+            className={`${sans.className} inline-flex items-center gap-[0.6rem] whitespace-nowrap rounded-full bg-white px-[1.4rem] py-[0.85rem] text-[0.68rem] font-semibold uppercase leading-none tracking-[0.08em] text-[#0f2f7a] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.2)] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-[#f0a44b] motion-reduce:transition-none max-[560px]:w-full max-[560px]:justify-center`}
+          >
+            Get in touch
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+              className="h-[0.9rem] w-[0.9rem]"
+            >
+              <path d="M2 8h12M9 3l5 5-5 5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
